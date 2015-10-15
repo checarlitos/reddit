@@ -51,6 +51,11 @@
 		</p>
 
 		<ol>
+			<li>opens borwser</li>
+			<li>Direct himself to reddit.com by typing addres in browser</li>
+			<li>Logs into to site with user ID and PW</li>
+			<li>reads replies/comments in his message box to his previous posts</li>
+			<li>replies to messages</li>
 			<li>find people to make angry</li>
 			<li>reads articles and posts that could be right for the kicking.</li>
 			<li>seeks out target</li>
