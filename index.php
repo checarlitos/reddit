@@ -61,6 +61,16 @@
 				<td>
 					<ol>
 						<li>sample</li>
+						1-OS direct browser to open, browser direct url to server begins to feed info for reddit.com to users browser.
+						2-reddit opens a required info field and then redirect the page
+						3-reddit opens the users landing page in a new page in the same window.
+						4-reddit opens another new page in the same window and displaying messages the user has received.
+						5-reddit opens a dropdown text field and a save/submit button. User clicks save/submit and the message is sent.
+						6-reddit opens page that are sub directories with multiple posts
+						7-reddit opens a post in a new page on the same window, reddit display the original post submitted and all its comments associated with the post.
+						8-reddit direct a value to the post in a rating scale.
+						9-reddit opens a dropdown text field and a save/submit button. User clicks save/submit and message has been sent.
+						10- reddit repeats steps 6-9 11-reddit log out option is clicked and reddit closed users account.
 					</ol>
 				</td>
 			</tr>
