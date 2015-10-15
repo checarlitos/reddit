@@ -52,19 +52,18 @@
 				<td>4reddit opens another new page in the same window and displaying messages the user has received.</td>
 				<td>5User reviews and replies to messages.</td>
 				<td>5reddit opens a dropdown text field and a save/submit button. User clicks save/submit and the message is sent.</td>
-				<li>6reads and replies to comments to their posting.</li>
-				<li>6reddit opens page that are sub directories with multiple posts </li>
-				<li>7User seeks out literature/articles that interest them.</li>
-				<li>7reddit opens a post in a new page on the same window, reddit display the original post submitted and all its comments associated with the post.</li>
-				<li>8user reads articles</li>
-				<li>8reddit direct a value to the post in a rating scale.</li>
-				<li>9submits up or down votes.</li>
-				<li>9reddit opens a dropdown text field and a save/submit button. User clicks save/submit and message has been sent.</li>
-				<li>10comments on articles.</li>
-				<li>10- reddit repeats steps 6-9</li>
-				<li> 11user repeats steps 6-12 until satisfied.</li>
-				<li>11-reddit log out option is clicked and reddit closed users account.</li>
-
+				<td>6reads and replies to comments to their posting.</td>
+				<td>6reddit opens page that are sub directories with multiple posts </td>
+				<td>7User seeks out literature/articles that interest them.</td>
+				<td>7reddit opens a post in a new page on the same window, reddit display the original post submitted and all its comments associated with the post.</td>
+				<td>8user reads articles</td>
+				<td>8reddit direct a value to the post in a rating scale.</td>
+				<td>9submits up or down votes.</td>
+				<td>9reddit opens a dropdown text field and a save/submit button. User clicks save/submit and message has been sent.</td>
+				<td>10comments on articles.</td>
+				<td>10- reddit repeats steps 6-9</td>
+				<td> 11user repeats steps 6-12 until satisfied.</td>
+				<td>11-reddit log out option is clicked and reddit closed users account.</td>
 			</tr>
 
 
