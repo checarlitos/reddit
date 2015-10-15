@@ -14,7 +14,7 @@
 		<h3>*PERSONA#1 “Billy"</h3>
 		<p>
 			Billy is a young adult ranging from ages 18-35. Billy is a information driven individual and concernedwith world news and events that are not talked about in
-			the main steam media. Billys scene of humor can be slightly cold and dark and is attracted to the oddities that the web has offers. Billy is in touch with the worlds modern technologies, advancements and is tech savvy. He appears to be is a open minded, liberal truth seeker. Bill is cynical towards corporate america.Billy runs the most recent version of windows OS and mostly uses his computer as a tool for work/studies. His most used programs are excel,word and some minimal video and editing software. Bill takes fun in edit photos and videos he takes with his new expensive smart phone. bill has a lot of cool apps that he finds useful. Bill likes to have and learn about the latest in smart products, appliances and gadgets. One of his favorite stores is Sharper image.
+			the main steam media. Billys scene of humor can be slightly cold and dark and is attracted to the oddities that the web has offers. Billy is in touch with the worlds modern technologies, advancements and is tech savvy. He appears to be is a open minded, liberal truth seeker. Bill is cynical towards corporate america. Billy runs the most recent version of windows OS and mostly uses his computer as a tool for work/studies. His most used programs are excel,word and some minimal video and editing software. Bill takes fun in edit photos and videos he takes with his new expensive smart phone. bill has a lot of cool apps that he finds useful. Bill likes to have and learn about the latest in smart products, appliances and gadgets. One of his favorite stores is Sharper image.
 		</p>
 
 		<h3>*PERSONA#2 "Bobby"</h3>
@@ -46,7 +46,9 @@
 		<br>
 
 		<h3>How Bobby arrives at his goal of trolling people</h3>
-		<p> </p>
+		<p>
+			Bobby has nothing to do so he feels like having some fun. Bobby opens the reddit.com page and begin to direct his mouse to the login tab where he being to enter his user name and password. Bobby then directs and click his mouse on the messages button. A new page opens on the same window where he then beings to read a flurry or messages sent to him as reply to his horrible comments that he has made to people earlier int he week. Yes ladies and gentleman Bobby is a TROLL. Bobby laughs uncontrollably and he clicks and selects message after message to reading replies from other users who he has offended and made angry with his hateful driven messages. Bobby then decides to once again file the fires so he direct and clicks his mouse to the reply button that then opens a page with a ares where he can type in message. After he types his message into the text area he clicks send/submit. Bobby then gets a sense of power that only a bully would experience. Bobby proceeds back to the messages he has received and continues to replies to more messages. After bobby has replied to the people he is trolling he clicks search tab and types in his sub reddit the prefers when seeking for more pray to troll. Bobby clicks a post that interest him he scales down the page reading other user comments, he finds his next victim and clicks the reply button, the comment he selected expands and a text area opens up. Bobby then precedes to spew his hateful, vulgar and insulting tirade. After coming down for his anger high he clicks the send/submit button, he then sits back and a experiences a disgusting scene of pleasure. Bobby then clicks to another sub reddit proceeds to scroll and click thew posts hunting down his next victims.
+		</p>
 
 		<ol>
 			<li>find people to make angry</li>
