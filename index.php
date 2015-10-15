@@ -63,11 +63,10 @@
 			<li>seeks out target</li>
 			<li>reviews targets past comments and posts.</li>
 			<li>selects their targets specific commenst/posts to troll.</li>
-			<li>user clicks reply</li>
-			<li>user being to add text to text area</li>
-			<li>user clicks save/submit.</li>
-			<li>user returns to pages of interest</li>
-			<li>user repeats steps 3-8 until satisfied.</li>
+			<li>user clicks reply and types a tolling message</li>
+			<li>user returns to pages of interest and seeks out more next victim</li>
+			<li>user repeats steps 6-10 until satisfied.</li>
+			<li>user logs out</li>
 
 		</ol>
 
