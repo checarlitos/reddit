@@ -44,7 +44,17 @@
 			<tr>
 				<td>
 					<ol>
-						<li></li>
+						<li>type url to browser</li>
+						<li>logging to user account using registered username & PW</li>
+						<li>Users landing page opens</li>
+						<li>User reviews and replies to messages</li>
+						<li>reads and replies to comments to their posting</li>
+						<li>User seeks out literature/articles that interest them</li>
+						<li>user reads article</li>
+						<li>submits up or down votes</li>
+						<li>comments on articles</li>
+						<li>user repeats steps 6-9 until satisfied.</li>
+						<li>user logs out.</li>
 					</ol>
 				</td>
 			</tr>
