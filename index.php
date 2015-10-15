@@ -42,7 +42,7 @@
 			<li>user reads articles</li>
 			<li>submits up or down votes.</li>
 			<li>comments on articles.</li>
-			<li> user repeats steps 6-9 until satisfied.</li>
+			<li> user repeats steps 6-12 until satisfied.</li>
 			<li>user logs out.</li>
 		</ol>
 		<br>
