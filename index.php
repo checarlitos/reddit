@@ -56,7 +56,22 @@
 				</td>
 
 
-				<td>$100</td>
+				<td>
+					<ol>
+						<li>OS direct browser to open, browser direct url to server begins to feed info for reddit.com to users browser.</li>
+						<li>reddit opens a required info field and then redirect the page</li>
+						<li>reddit opens the users landing page in a new page in the same window.</li>
+						<li>reddit opens another new page in the same window and displaying messages the user has received.</li>
+						<li>reddit opens a dropdown text field and a save/submit button. User clicks save/submit and the message is sent.</li>
+						<li>reddit opens page that are sub directories with multiple posts </li>
+						<li>reddit opens a post in a new page on the same window, reddit display the original post submitted and all its comments associated with the post.</li>
+						<li>reddit direct a value to the post in a rating scale.</li>
+						<li>reddit opens a dropdown text field and a save/submit button. User clicks save/submit and message has been sent.</li>
+						<li>10- reddit repeats steps 6-9</li>
+						<li>11-reddit log out option is clicked and reddit closed users account.</li>
+					</ol>
+				</td>
+
 			</tr>
 		</table>
 
