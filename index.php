@@ -32,6 +32,8 @@
 			To satisfy Billys thirst for information and interaction with other users he clicks through dozens and dozens of sub reddits that he regularly visits reading and scrolling down the pages reading the titles trying to find something that really interest him. While billy is browsing through posts and sub reddit pages Billy begins to click on the reply/comment button that opens a text area where he begins to type his opinions, insight or tips on the post he has selected. billy will continue this process until he feels that he has accomplish and satisfied his need to interact with reddit.com users. Billy will preform this entire process several times a day and at time will proceed for hours without end in sight.
 		</p>
 
+		<table> <tr> <th>Month</th> <th>Savings</th> </tr> <tr> <td>January</td> <td>$100</td> </tr> </table>
+
 		<ol>**Front End***
 			<li>type url to browser.</li>
 			<li>logging to user account using registered username & email.</li>
