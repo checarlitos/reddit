@@ -39,7 +39,6 @@
 			<tr>
 				<th>Front End</th>
 				<th>Back End</th>
-				<th>type url to browser</th>
 			</tr>
 
 			<tr>
