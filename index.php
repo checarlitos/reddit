@@ -36,7 +36,18 @@
 		</p>
 
 		<table class="table table-responsive table-stripped">
+			<tr>
+				<th>Front End</th>
+				<th>Back End</th>
+			</tr>
 
+			<tr>
+				<td>
+					<ol>
+
+					</ol>
+				</td>
+			</tr>
 		</table>
 
 		<br></br>
