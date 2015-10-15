@@ -34,29 +34,33 @@
 
 		<table>
 			<tr>
-				<th>Month</th>
-				<th>Savings</th>
+				<th>Front End</th>
+				<th>Back End</th>
 			</tr>
 
 			<tr>
-				<td>January</td>
+				<td>
+					<ol>**Front End***
+						<li>type url to browser.</li>
+						<li>logging to user account using registered username & email.</li>
+						<li>Users landing page opens.</li>
+						<li>User reviews and replies to messages.</li>
+						<li>reads and replies to comments to their posting.</li>
+						<li>User seeks out literature/articles that interest them.</li>
+						<li>user reads articles</li>
+						<li>submits up or down votes.</li>
+						<li>comments on articles.</li>
+						<li> user repeats steps 6-12 until satisfied.</li>
+						<li>user logs out.</li>
+					</ol>
+				</td>
+
+
 				<td>$100</td>
 			</tr>
 		</table>
 
-		<ol>**Front End***
-			<li>type url to browser.</li>
-			<li>logging to user account using registered username & email.</li>
-			<li>Users landing page opens.</li>
-			<li>User reviews and replies to messages.</li>
-			<li>reads and replies to comments to their posting.</li>
-			<li>User seeks out literature/articles that interest them.</li>
-			<li>user reads articles</li>
-			<li>submits up or down votes.</li>
-			<li>comments on articles.</li>
-			<li> user repeats steps 6-12 until satisfied.</li>
-			<li>user logs out.</li>
-		</ol>
+
 		<br>
 
 		<h3>How Bobby arrives at his goal of trolling people</h3>
