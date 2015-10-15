@@ -21,7 +21,9 @@
 		<p>
 			Bobby is a young adult between 18-35,
 			helikes fast cars and to party. His drink of choice is vodka red bull. he and has 10 empty monster energy drink cans on the floor of his tricked out 2005 Honda civic.
-			Bobby likes to wear fox motocross t-shirts with white sunglasses and a backward baseball hat. Bobby is a me guy, bobby likes to talk about himself and does not care about anyone. If Bobby does not like you he will try to fight you. Bobby is likely to put people down for no reason and justify his actions as him just trying to have some fun.
+			Bobby likes to wear fox motocross t-shirts with white sunglasses and a backward baseball hat. Bobby is a me guy, bobby likes to talk about himself and does not care about anyone. If Bobby does not like you he will try to fight you. Bobby is likely to put people down for no reason and justify his actions as him just trying to have some fun. Bobby is tech savvy and is up todate with technology but he also think that knowing to much can make him un-cool. Bobby is a Mac user but only because its expensive and cool.
+			Bobby is tech savvy and is up todate with technology but he also think that knowing to much can make him un-cool. Bobby is a Mac user but only because its expensive and cool.
+			bobby likes to download illegal music and movies. Bobby uses his computer only for entertainment purposes, apart from viewing degrading sites bobby also likes to play video violent games on his computer and gaming system. Bobby also has an array of pointless apps on his phone that he finds more entertaining than useful.
 		</p>
 
 		<h2>Use Case for Billy and Bobby</h2>
