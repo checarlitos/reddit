@@ -91,7 +91,7 @@
 				</td>
 
 			</tr>
-		</table>
+		</t</table>
 
 		<br></br>
 
