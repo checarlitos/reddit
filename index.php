@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 	<html>
 	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet"/>
 		<title>data design reddit projects for oct 14th 2015</title>
 	</head>
 
@@ -32,48 +35,38 @@
 			To satisfy Billys thirst for information and interaction with other users he clicks through dozens and dozens of sub reddits that he regularly visits reading and scrolling down the pages reading the titles trying to find something that really interest him. While billy is browsing through posts and sub reddit pages Billy begins to click on the reply/comment button that opens a text area where he begins to type his opinions, insight or tips on the post he has selected. billy will continue this process until he feels that he has accomplish and satisfied his need to interact with reddit.com users. Billy will preform this entire process several times a day and at time will proceed for hours without end in sight.
 		</p>
 
-		<table>
+		<table class="table table-responsive table-striped">
 			<tr>
 				<th>Front End</th>
 				<th>Back End</th>
 			</tr>
 
 			<tr>
-				<td>
-					<ol>
-						<li>type url to browser.</li>
-						<li>logging to user account using registered username & email.</li>
-						<li>Users landing page opens.</li>
-						<li>User reviews and replies to messages.</li>
-						<li>reads and replies to comments to their posting.</li>
-						<li>User seeks out literature/articles that interest them.</li>
-						<li>user reads articles</li>
-						<li>submits up or down votes.</li>
-						<li>comments on articles.</li>
-						<li> user repeats steps 6-12 until satisfied.</li>
-						<li>user logs out.</li>
-					</ol>
-				</td>
-
-
-				<td>
-					<ol>
-						<li>OS direct browser to open, browser direct url to server begins to feed info for reddit.com to users browser.</li>
-						<li>reddit opens a required info field and then redirect the page</li>
-						<li>reddit opens the users landing page in a new page in the same window.</li>
-						<li>reddit opens another new page in the same window and displaying messages the user has received.</li>
-						<li>reddit opens a dropdown text field and a save/submit button. User clicks save/submit and the message is sent.</li>
-						<li>reddit opens page that are sub directories with multiple posts </li>
-						<li>reddit opens a post in a new page on the same window, reddit display the original post submitted and all its comments associated with the post.</li>
-						<li>reddit direct a value to the post in a rating scale.</li>
-						<li>reddit opens a dropdown text field and a save/submit button. User clicks save/submit and message has been sent.</li>
-						<li>10- reddit repeats steps 6-9</li>
-						<li>11-reddit log out option is clicked and reddit closed users account.</li>
-					</ol>
-				</td>
+				<td>type url to browser.</td>
+				<td>OS direct browser to open, browser direct url to server begins to feed info for reddit.com to users browser.</td>
+				<td>2type url to browser.</td>
+				<td>2reddit opens a required info field and then redirect the page</td>
+				<td>3logging to user account using registered username & email.</td>
+				<td>3reddit opens the users landing page in a new page in the same window.</td>
+				<td>4Users landing page opens.</td>
+				<td>4reddit opens another new page in the same window and displaying messages the user has received.</td>
+				<td>5User reviews and replies to messages.</td>
+				<td>5reddit opens a dropdown text field and a save/submit button. User clicks save/submit and the message is sent.</td>
+				<li>6reads and replies to comments to their posting.</li>
+				<li>6reddit opens page that are sub directories with multiple posts </li>
+				<li>7User seeks out literature/articles that interest them.</li>
+				<li>7reddit opens a post in a new page on the same window, reddit display the original post submitted and all its comments associated with the post.</li>
+				<li>8user reads articles</li>
+				<li>8reddit direct a value to the post in a rating scale.</li>
+				<li>9submits up or down votes.</li>
+				<li>9reddit opens a dropdown text field and a save/submit button. User clicks save/submit and message has been sent.</li>
+				<li>10comments on articles.</li>
+				<li>10- reddit repeats steps 6-9</li>
+				<li> 11user repeats steps 6-12 until satisfied.</li>
+				<li>11-reddit log out option is clicked and reddit closed users account.</li>
 
 			</tr>
-		</table>
+
 
 		<br></br>
 
@@ -82,7 +75,7 @@
 			Bobby has nothing to do so he feels like having some fun. Bobby opens the reddit.com page and begin to direct his mouse to the login tab where he being to enter his user name and password. Bobby then directs and click his mouse on the messages button. A new page opens on the same window where he then beings to read a flurry or messages sent to him as reply to his horrible comments that he has made to people earlier int he week. Yes ladies and gentleman Bobby is a TROLL. Bobby laughs uncontrollably and he clicks and selects message after message to reading replies from other users who he has offended and made angry with his hateful driven messages. Bobby then decides to once again file the fires so he direct and clicks his mouse to the reply button that then opens a page with a ares where he can type in message. After he types his message into the text area he clicks send/submit. Bobby then gets a sense of power that only a bully would experience. Bobby proceeds back to the messages he has received and continues to replies to more messages. After bobby has replied to the people he is trolling he clicks search tab and types in his sub reddit the prefers when seeking for more pray to troll. Bobby clicks a post that interest him he scales down the page reading other user comments, he finds his next victim and clicks the reply button, the comment he selected expands and a text area opens up. Bobby then precedes to spew his hateful, vulgar and insulting tirade. After coming down for his anger high he clicks the send/submit button, he then sits back and a experiences a disgusting scene of pleasure. Bobby then clicks to another sub reddit proceeds to scroll and click thew posts hunting down his next victims.
 		</p>
 
-		<table>
+		<table class="table table-responsive table-striped">
 			<tr>
 				<th>Front End</th>
 				<th>Back End</th>
