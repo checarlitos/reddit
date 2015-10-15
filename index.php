@@ -75,7 +75,7 @@
 			</tr>
 		</table>
 
-
+		<br></br>
 
 		<h3>How Bobby arrives at his goal of trolling people</h3>
 		<p>
