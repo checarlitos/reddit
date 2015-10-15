@@ -108,7 +108,23 @@
 				</td>
 
 
-				<td>$100</td>
+				<td>
+				    <ol>
+						 <li>OS direct browser to open
+						 <li>URL is entered into the bowser address bar and is direct to the appropriate server and web page is retrieved and presented on the browser.
+						 <li>clicks login icon on top left corner of page, small text field menu opens requesting user name and password, when enter page is redirected to user page.
+						 <li>messages page is opens and displays multiple message links, page has scrolling capabilities to display multiple messages user has in account.
+						 <li>click reply opens a drop down window on the same page. text is entered into that text area window. clicking send will post and send message.
+						 <li>click on search tab enabling text curser to appear, being to type text to field to re direct to desired page (category/sub reddit).
+						 <li>clicks link of interested post opens a the page where post is shown along with all of its comments that people have submitted.
+						 <li>scrolling down page exposed a comments related to the post of interest.
+						 <li>clicking a users names under comments links and opens page with directory where selected users previous post can bee seen.
+						 <li>click reply on a post, drop down text area opens.
+						 <li>and text is input into tex field, send/submit button is clicked and message is sent.
+						 <li>steps are repeated
+						 <li>logout/sign-out is clicked and user page is closed and re-directed to home page.
+					 </ol>
+				</td>
 			</tr>
 		</table>
 
