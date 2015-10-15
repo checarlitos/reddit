@@ -25,7 +25,7 @@
 		</p>
 
 		<h2>Use Case for Billy and Bobby</h2>
-		<h3>How billy arrives to his goal</h3>
+		<h3>How billy arrives to his goal of being informed and helpful.</h3>
 		<p>Billy opens his browser and directs himself to reddit.com. he then proceeds to logging to his user account by clicking the login button and entering his username and very secretive password “1two3four” into the required field. His user landing page opens and he quickly direct the mouse to the header where and clicks messages. A new page open where he is shown messages/replies people have submitted in regards to his previous posts and comments he has made. Billy begins to reply to messages by clicking the the first message to expand the messages options, he then clicks reply, a new window opens with a form field and he starts to types a messages. after veraciously typing his message he clicks the send button and the message is sent. Billy continues to reply to messages and after he has taken care of “business” he starts on a quest for more information.
 			To satisfy Billys thirst for information and interaction with other users he clicks through dozens and dozens of sub reddits that he regularly visits reading and scrolling down the pages reading the titles trying to find something that really interest him. While billy is browsing through posts and sub reddit pages Billy begins to click on the reply/comment button that opens a text area where he begins to type his opinions, insight or tips on the post he has selected. billy will continue this process until he feels that he has accomplish and satisfied his need to interact with reddit.com users. Billy will preform this entire process several times a day and at time will proceed for hours without end in sight. </p>
 
@@ -44,8 +44,22 @@
 		</ol>
 		<br>
 
-		<h3>Bobby</h3>
+		<h3>How Bobby arrives at his goal of trolling people</h3>
 		<p> </p>
+
+		<ol>
+			<li>find people to make angry</li>
+			<li>reads articles and posts that could be right for the kicking.</li>
+			<li>seeks out target</li>
+			<li>reviews targets past comments and posts.</li>
+			<li>selects their targets specific commenst/posts to troll.</li>
+			<li>user clicks reply</li>
+			<li>user being to add text to text area</li>
+			<li>user clicks save/submit.</li>
+			<li>user returns to pages of interest</li>
+			<li>user repeats steps 3-8 until satisfied.</li>
+
+		</ol>
 
 	</body>
 
