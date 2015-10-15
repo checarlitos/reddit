@@ -40,7 +40,7 @@
 
 			<tr>
 				<td>
-					<ol>**Front End***
+					<ol>
 						<li>type url to browser.</li>
 						<li>logging to user account using registered username & email.</li>
 						<li>Users landing page opens.</li>
