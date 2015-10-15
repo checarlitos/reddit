@@ -109,25 +109,8 @@
 
 
 				<td>$100</td>
-			</tr> </table>
-
-		<ol>***Front End***
-			<li>opens borwser</li>
-			<li>Direct himself to reddit.com by typing addres in browser</li>
-			<li>Logs into to site with user ID and PW</li>
-			<li>reads replies/comments in his message box to his previous posts</li>
-			<li>replies to messages</li>
-			<li>find people to make angry</li>
-			<li>reads articles and posts that could be right for the kicking.</li>
-			<li>seeks out target</li>
-			<li>reviews targets past comments and posts.</li>
-			<li>selects their targets specific commenst/posts to troll.</li>
-			<li>user clicks reply and types a tolling message</li>
-			<li>user returns to pages of interest and seeks out more next victim</li>
-			<li>user repeats steps 6-10 until satisfied.</li>
-			<li>user logs out</li>
-
-		</ol>
+			</tr>
+		</table>
 
 	</body>
 
