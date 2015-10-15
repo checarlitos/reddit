@@ -35,7 +35,7 @@
 		<table>
 			<tr>
 				<th>Front End</th>
-				<th>Back End</th>
+				<th style="align-left">Back End</th>
 			</tr>
 
 			<tr>
