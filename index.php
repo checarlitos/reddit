@@ -57,6 +57,12 @@
 						<li>user logs out.</li>
 					</ol>
 				</td>
+
+				<td>
+					<ol>
+						<li>sample</li>
+					</ol>
+				</td>
 			</tr>
 		</table>
 
