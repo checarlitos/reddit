@@ -22,7 +22,7 @@
 
 		<h3>*PERSONA#2 "Bobby"</h3>
 		<p>
-			Bobby is surprisingly tech savvy. He is self taught, and grew interest while “hooking up” his myspace page back in the early 2000’s. He is up to date with technology and has a little more than average idea of how the web works. Bobby is a Mac user but only because its expensive and cool, he likes to download illegal music and movies and mostly uses his computer for entertainment purposes. He is a major Facebook user who’s personal and his social life is dependent on fb messaging. Bobby also frequently visits other sites pertain to cars, guns, and multiple video sites as well. Apart from viewing degrading sites he also enjoys the comfort of endless hours on the couch playing violent games.
+			Bobby is surprisingly tech savvy. He is self taught, and his interest in computers grew while “hooking up” his myspace page back in the early 2000’s. He is up to date with technology and has a little more than average idea of how the web works. Bobby is a Mac user but only because its expensive and cool, he likes to download illegal music and movies and mostly uses his computer for entertainment purposes. He is a major Facebook user who’s personal and his social life is dependent on fb messaging. Bobby also frequently visits other sites pertain to cars, guns, and multiple video sites as well. Apart from viewing degrading sites he also enjoys the comfort of endless hours on the couch playing violent games.
 		</p>
 
 		<h2>Use Case for Billy and Bobby</h2>
