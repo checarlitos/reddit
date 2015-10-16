@@ -65,7 +65,8 @@
 						<li>reddit opens a post in a new page on the same window, reddit display the original post submitted and all its comments associated with the post.</li>
 						<li>reddit direct a value to the post in a rating scale.</li>
 						<li>reddit opens a dropdown text field and a save/submit button. User clicks save/submit and message has been sent.</li>
-						<li> reddit repeats steps 6-9 11-reddit log out option is clicked and reddit closed users account.</li>
+						<li> reddit repeats steps 6-9
+						<li>reddit log out option is clicked and reddit closed users account.</li>
 					</ol>
 				</td>
 			</tr>
