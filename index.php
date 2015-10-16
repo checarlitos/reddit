@@ -56,7 +56,6 @@
 
 				<td>
 					<ol>
-						<li>sample</li>
 						<li>OS direct browser to open, browser direct url to server begins to feed info for reddit.com to users browser.</li>
 						<li>reddit opens a required info field and then redirect the page</li>
 						<li>reddit opens the users landing page in a new page in the same window.</li>
