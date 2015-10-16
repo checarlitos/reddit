@@ -99,8 +99,9 @@
 						<li>-seeks out target</li>
 						<li>-reviews targets past comments and posts.</li>
 						<li>-selects their targets specific commenst/posts to troll.</li>
-						<li>-user clicks reply -user being to add text to text area -user clicks save/submit.</li>
-						<li>user returns to pages of interest -user repeats steps 3-8 until satisfied.</li>
+						<li>-user clicks reply types text area and then save/submits the message.</li>
+						<li>user repeats steps 6-12 until satisfied.</li>
+						<li>User log off reddit acount</li>
 					</ol>
 				</td>
 
