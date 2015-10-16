@@ -97,7 +97,6 @@
 						<li>-begins to search for people to troll</li>
 						<li>-reads articles and posts that could be right for the kicking.v
 						<li>-seeks out target</li>
-						<li>-reviews targets past comments and posts.</li>
 						<li>-selects their targets specific commenst/posts to troll.</li>
 						<li>-user clicks reply types text area and then save/submits the message.</li>
 						<li>user repeats steps 6-12 until satisfied.</li>
