@@ -11,7 +11,7 @@ CREATE TABLE ruser (
 
 CREATE TABLE post (
 		subReddit INT UNSIGNED AUTO_INCREMENT NOT NULL,
-		userHandle INT UNSIGNED NOT NULL,
+	   userHandle VARCHAR(32) NOT NULL,
 		content VARCHAR (140) NOT NULL,
 		FOREIGN KEY (userHandle) REFERENCES ruser(userHandle),
 		PRIMARY KEY (subReddit)
@@ -19,7 +19,7 @@ CREATE TABLE post (
 
 CREATE TABLE comments (
 		subPost INT UNSIGNED AUTO_INCREMENT NOT NULL,
-		userHandle INT UNSIGNED NOT NULL,
+	   userHandle VARCHAR(32) NOT NULL,
 		content VARCHAR (140) NOT NULL,
 		FOREIGN KEY (userHandle) REFERENCES ruser (userHandle),
 		PRIMARY KEY (subPost)
