@@ -125,9 +125,9 @@
 			</tr>
 		</table>
 
-		<table>
+		<p>
 			<img src="datadesign005.svg">Entity Relationship Diagram
-		</table>
+		</p>
 
 	</body>
 
