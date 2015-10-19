@@ -22,8 +22,7 @@ CREATE TABLE comments (
 		userHandle INT UNSIGNED NOT NULL,
 		content VARCHAR (140) NOT NULL,
 		FOREIGN KEY (userHandle) REFERENCES ruser (userHandle),
-		FOREIGN KEY (subPost) REFERENCES post (subPost),
-		PRIMARY KEY (userHandle, subPost)
+		PRIMARY KEY (subPost)
 );
 
 
