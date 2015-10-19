@@ -10,11 +10,9 @@ CREATE TABLE ruser (
 );
 
 CREATE TABLE post (
-		subReddit INT USIGNED AUTO_INCREMENT NOT NULL,
+		subReddit INT UNSIGNED AUTO_INCREMENT NOT NULL,
 		userHandle INT UNSIGNED NOT NULL,
 		content VARCHAR (140) NOT NULL,
-		vote
-		INDEX (userHandle),
 		FOREIGN KEY (userHandle) REFERENCES ruser(userHandle),
 		PRIMARY KEY (subReddit)
 );
@@ -23,8 +21,6 @@ CREATE TABLE comments (
 		subPost INT UNSIGNED AUTO_INCREMENT NOT NULL,
 		userHandle INT UNSIGND NOT NULL,
 		content VARCHAR (140) NOT NULL,
-		vote
-		INDEX (userHandle),
 		FOREIGN KEY (userHandle) REFERENCES (userHandle),
 		FOREIGN KEY (subPost) REFERENCES subPost (subPost),
 		PRIMARY KEY (userHandle, subPost)
