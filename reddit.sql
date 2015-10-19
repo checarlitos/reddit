@@ -19,11 +19,10 @@ CREATE TABLE post (
 
 CREATE TABLE comments (
 		subPost INT UNSIGNED AUTO_INCREMENT NOT NULL,
-		userHandle INT UNSIGND NOT NULL,
+		userHandle INT UNSIGNED NOT NULL,
 		content VARCHAR (140) NOT NULL,
 		FOREIGN KEY (userHandle) REFERENCES ruser (userHandle),
 		FOREIGN KEY (subPost) REFERENCES post (subPost),
-
 		PRIMARY KEY (userHandle, subPost)
 );
 
