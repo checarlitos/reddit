@@ -126,7 +126,7 @@
 		</table>
 
 		<table>
-			<a href="reddit/datadesign005.svg">Entity Relationship Diagram</a>
+			<img src="reddit/datadesign005.svg">Entity Relationship Diagram
 		</table>
 
 	</body>
