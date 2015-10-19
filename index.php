@@ -127,6 +127,7 @@
 
 		<h2>Entity Relationship Diagram</h2>
 		<img src="images/datadesign005.svg"/>
+		</br>
 
 	</body>
 
