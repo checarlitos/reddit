@@ -46,12 +46,20 @@ class Post {
 	 */
 	public function setPostId($newPostId) {
 		$newPostId = filter_var($newPostId, FILTER_VALIDATE_INT);
-		if($newPostId === false){
+		if($newPostId === false) {
 			throw (new UnexpectedValueException ("post id is not valid integer"));
 		}
 
 		// convert and store the post id
 		$this->postId = intval($newPostId);
+
+		/**
+		 * accessor method for user name
+		 */
+		public function getUserName() {
+			return($this->userName);
+		}
+
 	}
 }
 
