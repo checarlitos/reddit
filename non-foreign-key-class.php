@@ -36,8 +36,8 @@ class Post {
 	 */
 	public function getpostId() {
 		return ($this-> postId);
-
 	}
+
 }
 
 
