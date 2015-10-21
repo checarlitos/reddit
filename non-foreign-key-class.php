@@ -35,11 +35,25 @@ class Post {
 	 * @return int value of post id
 	 */
 	public function getpostId() {
-		return ($this-> postId);
+		return ($this->postId);
 	}
 
-}
+	/**
+	 *  mutator method for post id
+	 *
+	 * @param int $newPostID new value of profile id
+	 * @throws UnexpectedValueException if $newpostId is not an integer
+	 */
+	public function setPostId($newPostId) {
+		$newPostId = filter_var($newPostId, FILTER_VALIDATE_INT);
+		if($newPostId === false){
+			throw (new UnexpectedValueException ("post id is not valid integer"));
+		}
 
+		// convert and store the post id
+		$this->postId = intval($newPostId);
+	}
+}
 
 
 ?>
