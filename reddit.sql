@@ -3,27 +3,26 @@ DROP TABLE IF EXISTS post;
 DROP TABLE IF EXISTS user;
 
 CREATE TABLE user (
-		userId INT UNSIGNED AUTO_INCREMENT NOT NULL,
-		handleId VARCHAR(32) NOT NULL,
-		UNIQUE(handleId),
-		PRIMARY KEY(userId)
+	userId INT UNSIGNED AUTO_INCREMENT NOT NULL,
+	handle VARCHAR(32) NOT NULL,
+	UNIQUE(handle),
+	PRIMARY KEY(userId)
 );
 
 CREATE TABLE post (
-		postId INT UNSIGNED AUTO_INCREMENT NOT NULL,
-	   userHandle VARCHAR(32) NOT NULL,
-		content VARCHAR (140) NOT NULL,
-		FOREIGN KEY (userHandle) REFERENCES ruser(userHandle),
-		PRIMARY KEY (postId)
+	postId INT UNSIGNED AUTO_INCREMENT NOT NULL,
+	handle VARCHAR(32) NOT NULL,
+	contents VARCHAR (140) NOT NULL,
+	FOREIGN KEY (handle) REFERENCES user(handle),
+	PRIMARY KEY (postId)
 );
 
-CREATE TABLE comments (
-		subPost INT UNSIGNED AUTO_INCREMENT NOT NULL,
-	   userHandle VARCHAR(32) NOT NULL,
-		content VARCHAR (140) NOT NULL,
-		FOREIGN KEY (userHandle) REFERENCES ruser (userHandle),
-		PRIMARY KEY (subPost)
+CREATE TABLE comment (
+	commentId INT UNSIGNED AUTO_INCREMENT NOT NULL,
+	postId INT UNSIGNED NOT NULL,
+	handle VARCHAR(32) NOT NULL,
+	contents VARCHAR (140) NOT NULL,
+	FOREIGN KEY (handle) REFERENCES user(handle),
+	FOREIGN KEY (postId) REFERENCES post(postId),
+	PRIMARY KEY (commentId)
 );
-
-
-
