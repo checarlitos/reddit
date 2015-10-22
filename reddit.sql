@@ -18,11 +18,11 @@ CREATE TABLE post (
 );
 
 CREATE TABLE comment (
-	commentsId INT UNSIGNED AUTO_INCREMENT NOT NULL,
+	commentId INT UNSIGNED AUTO_INCREMENT NOT NULL,
 	postId INT UNSIGNED NOT NULL,
 	handle VARCHAR(32) NOT NULL,
 	contents VARCHAR (140) NOT NULL,
 	FOREIGN KEY (handle) REFERENCES user(handle),
 	FOREIGN KEY (postId) REFERENCES post(postId),
-	PRIMARY KEY (commentsId)
+	PRIMARY KEY (commentId)
 );
