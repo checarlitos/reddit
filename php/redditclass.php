@@ -101,7 +101,7 @@ class Post {
 	 * @param int $newPostHandle new value of profile id
 	 * @throws InvalidArgumentException if $newPostHandle is not an integer
 	 */
-	public function setUserHandle($newHandle) {
+	public function setHandle($newHandle) {
 		// base case
 		if($newHandle === null) {
 			$this->handle = null;
