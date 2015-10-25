@@ -191,6 +191,12 @@ class Post {
 			}
 
 			//create query template
+			$query  = "DELET FROM post WHERE postId = :postId";
+			$statement  = $pdo->prepare($query);
+
+		 //blind the member variables to the place holder in the template
+		$parameters = array("postId" => $this->postId);
+		$statement->execute($parameters);
 	}
 
 }//end Post class
