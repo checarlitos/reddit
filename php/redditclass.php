@@ -168,7 +168,10 @@ class Post {
 				$statement = $pdo->prepare($query);
 
 				//blind the member variables to the place holders in the template
+				$parameters = array("postId" => $this->postId, "newPostContents" => $this->contents);
+				$statement->execute($parameters);
 
+				//update the null postId with what mySQL just gave us
 
 }
 
