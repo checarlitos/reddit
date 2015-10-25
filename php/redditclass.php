@@ -219,8 +219,54 @@ class Post {
 				//blind the member variable to the place holders in the template
 				$parameters = array("handle" => $this->handle, "contents" => $this->contents, "postId" => $this-> postId);
 				$statement ->execute($parameters);
+		}
 
+		/**
+		 * get the post by content
+		 *
+		 * @param PDO $pdo pointer to PDO connection, by reference
+		 * @param string $contents post content to search for
+		 * @return SplFixedArray Array all posts found for this content
+		 * @throw PDOException when mySQL related errors occur
+		 */
+		public static function getPostByContents(PDO &$pdo, $contents){
+				// sanitize the description before searching
+				$contents = trim($contents);
+				$contents = filter_var($contents, FILTER_SANITIZE_STRING);
+				if(empty ($contents) === true) {
+							throw(new PDOException ("post content is invalid"));
+				}
 
-	}
+			// create query template
+				$query ="SELECT postId, handle, contents FROM post WHERE contents LIKE :contents";
+				$statement = $pdo->Prepare($query);
+
+				// bind the post content to the place holder in the template
+				$contents = "%$contents%";
+				$parameters = array("contents" => $contents);
+				$statement->execute($parameters);
+
+				// build a array of posts
+				$posts = new SplFixedArray($statement->rowCount());
+				$statement->setFetchMode(PDO::FETCH_ASSOC);
+				while(($row = $statement->fetch()) !==false) {
+							try {
+										$post = new Post($row["postId"], $row["contents"]);
+										$posts[$posts->key()] = $post;
+										$posts->next();
+							}  catch(exception $exception){
+										// if the row could not be converted, rethrow it
+										Throw(new PDOException($exception->getMessage(), 0, $exception));
+							}
+				}
+				return($posts);
+		}
+
+	/**
+	 * gets the post by postId
+	 *
+	 * @param PDO $pdo pointer to PDO connection, by reference
+	 * @param
+	 */
 
 }//end Post class
