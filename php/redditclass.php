@@ -124,31 +124,52 @@ class Post {
 
 
 	/**
-	 * mutator method for post comment
+	 * mutator method for post contents
 	 *
-	 * @param string $newPostComment new value of comment content
-	 * @throws InvalidArgumentException if $newPostComment is not a string or insecure
+	 * @param string $newPostContents new value of comment contents
+	 * @throws InvalidArgumentException if $newPostContents is not a string or insecure
 	 * @throws RangeException if $newPostComment is > 140 characters
 	 */
 
-		Public function setContents($newPostComment){
+		Public function setContents($newPostContents){
 			//verify the comment content is secure
-			$newPostComment = trim($newPostComment);
-			$newPostComment = filter_var($newPostComment, FILTER_SANITIZE_STRING);
-			if(empty($newPostComment)=== true){
+			$newPostContents = trim($newPostContents);
+			$newPostContents = filter_var($newPostContents, FILTER_SANITIZE_STRING);
+			if(empty($newPostContents)=== true){
 						throw(new InvalidArgumentException ("comment content is empty or insecure"));
 			}
 
 			//verify the comment content will fit in the database
-			if(strlen ($newPostComment) > 140){
+			if(strlen ($newPostContents) > 140){
 					throw(new RangeException("comment content to large"));
 			}
 
 			//store the comment content
-			$this->contents = $newPostComment;
+			$this->contents = $newPostContents;
 
 		}
 
+/**
+ * insert this Tweet into mySQL
+ *
+ * @param PDO $pdo pointer to PDO connection, by reference
+ * @throws PDOException when mysql related errors occur
+ */
 
+	public function insert(PDO &$pdo) {
+			//enforce the postId is null (i.e., don't insert a tweet that already exists)
+			if($this->postId !== null) {
+					throw(new PDOException("not a new post"));
+			}
+
+			// create query template
+
+				$query = "INSERT INTO post(handle, contents) VALUES(:handle, :contents)";
+				$statement = $pdo->prepare($query);
+
+				//blind the member variables to the place holders in the template
+
+
+}
 
 }//end Post class
