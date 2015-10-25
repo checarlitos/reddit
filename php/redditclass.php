@@ -119,7 +119,7 @@ class Post {
 		}
 
 		// convert and store the postHandle
-		$this->userHandle = intval($newHandle);
+		$this->handle = intval($newHandle);
 	}
 
 
@@ -168,7 +168,7 @@ class Post {
 				$statement = $pdo->prepare($query);
 
 				//blind the member variables to the place holders in the template
-				$parameters = array("postId" => $this->postId, "newPostContents" => $this->contents);
+				$parameters = array("handle" => $this->handle, "contents" => $this->contents);
 				$statement->execute($parameters);
 
 				//update the null postId with what mySQL just gave us
@@ -178,16 +178,16 @@ class Post {
 
 
 	/**
-	 * delet this post feom mySQL
+	 * delete this post from mySQL
 	 *
-	 * @pram pdo $pdo pointer to pdo connection, by reference
+	 * @param PDO $pdo pointer to pdo connection, by reference
 	 * @throws PDOException when mySQL related errors occur
 	 */
 
-	Public function dlete(PDO &$pdo) {
+	Public function delete(PDO &$pdo) {
 			// enforce the post Id is nor null (i.e., don not delete a post that has not been inserted)
 			if($this->postId === null){
-					throw(new PDOException("usable to delet a post that doesnot exist"));
+					throw(new PDOException("usable to delete a post that does not exist"));
 			}
 
 			//create query template
@@ -197,6 +197,30 @@ class Post {
 		 //blind the member variables to the place holder in the template
 		$parameters = array("postId" => $this->postId);
 		$statement->execute($parameters);
+	}
+
+	/**
+	 * update this Post in mySQL
+	 *
+	 * @param PDO $pdo pointer to PDO connection, by reference
+	 * @throws PDOException when mySQL related errors occur
+	 */
+
+	public function update(PDO &$pdo) {
+				//enfroce the tweet is is not null (i.e., do not update a post that has not been inserted)
+				if($this->postId === null) {
+							throw(new PDOException("unable to update a post that does not exist"));
+				}
+
+				// create query template
+				$query = "UPDATE post SET handle = :handle, contents = :content, WHERE postId = :postId";
+				$statement = $pdo->prepare($query);
+
+				//blind the member variable to the place holders in the template
+				$parameters = array("handle" => $this->handle, "contents" => $this->contents, "postId" => $this-> postId);
+				$statement ->execute($parameters);
+
+
 	}
 
 }//end Post class
