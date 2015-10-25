@@ -266,7 +266,49 @@ class Post {
 	 * gets the post by postId
 	 *
 	 * @param PDO $pdo pointer to PDO connection, by reference
-	 * @param
+	 * @param int $postId post id to search for
+	 * @return mixed Post found or null if not found
+	 * @throws PDOException when mySQL related errors occur
+	 */
+	public static function getPostbyPostId(PDO &$pdo, $postId) {
+		//sanitize the postId before searching
+		$postId = filter_var($postId, FILTER_VALIDATE_INT);
+		if($postId === false) {
+			throw(new PDOException("post id is not an integer"));
+		}
+		if($postId <= 0) {
+			throw(new PDOException ("post id is not positive"));
+		}
+
+		// create query template
+		$query = "SELECT postId, handel, contents FROM post WHERE postId = :postId";
+		$statement = $pdo->prepare($query);
+
+		// bind the post id to the place holder in the tamplate
+		$parameters = array("postId" => $postId);
+		$statement->execute($parameters);
+
+		// grab the post from mySQL
+		TRY {
+			$post = null;
+			$statement->setFetchMode(PDO::FETCH_ASSOC);
+			$row = $statement->fetch();
+			if($row !== false) {
+				$post = new Post($row ["postId"], $row["handle"], $row["contents"]);
+			}
+		} catch(Exception $exception) {
+			// if the row could not be converted, rethow it
+			throw(new PDOException($exception->getMessage(), 0, $exception));
+		}
+		return ($post);
+	}
+
+	/**
+	 * gets all Posts
+	 *
+	 * @param PDO $pdo pointer to PDO connection, by reference
+	 * @return SplFixedArray all Posts found
+	 * @throws PDO Exception When mySQL related errors occur
 	 */
 
 }//end Post class
