@@ -174,6 +174,23 @@ class Post {
 				//update the null postId with what mySQL just gave us
 				$this->postId = intval($pdo->lastInsertId());
 
-}
+	}
+
+
+	/**
+	 * delet this post feom mySQL
+	 *
+	 * @pram pdo $pdo pointer to pdo connection, by reference
+	 * @throws PDOException when mySQL related errors occur
+	 */
+
+	Public function dlete(PDO &$pdo) {
+			// enforce the post Id is nor null (i.e., don not delete a post that has not been inserted)
+			if($this->postId === null){
+					throw(new PDOException("usable to delet a post that doesnot exist"));
+			}
+
+			//create query template
+	}
 
 }//end Post class
