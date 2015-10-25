@@ -172,6 +172,7 @@ class Post {
 				$statement->execute($parameters);
 
 				//update the null postId with what mySQL just gave us
+				$this->postId = intval($pdo->lastInsertId());
 
 }
 
