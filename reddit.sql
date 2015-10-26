@@ -1,13 +1,7 @@
-DROP TABLE IF EXISTS handle;
 DROP TABLE IF EXISTS post;
+DROP TABLE IF EXISTS handle;
 DROP TABLE IF EXISTS contents;
 
-CREATE TABLE handle (
-	handle INT UNSIGNED AUTO_INCREMENT NOT NULL,
-	handle VARCHAR(32) NOT NULL,
-	UNIQUE(handle),
-	PRIMARY KEY(handle)
-);
 
 CREATE TABLE post (
 	postId INT UNSIGNED AUTO_INCREMENT NOT NULL,
@@ -17,12 +11,19 @@ CREATE TABLE post (
 	PRIMARY KEY (postId)
 );
 
+CREATE TABLE handle (
+	handle INT UNSIGNED AUTO_INCREMENT NOT NULL,
+	handle VARCHAR(32) NOT NULL,
+	UNIQUE(handle),
+	PRIMARY KEY(handle)
+);
+
 CREATE TABLE contents (
 	contents INT UNSIGNED AUTO_INCREMENT NOT NULL,
 	postId INT UNSIGNED NOT NULL,
 	handle VARCHAR(32) NOT NULL,
 	contents VARCHAR (140) NOT NULL,
-	FOREIGN KEY (handle) REFERENCES handle(handle),
-	FOREIGN KEY (postId) REFERENCES post(postId),
+	FOREIGN KEY (postId) REFERENCES handle(postId),
+	FOREIGN KEY (handle) REFERENCES post(handle),
 	PRIMARY KEY (contents)
 );
