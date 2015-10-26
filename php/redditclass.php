@@ -310,5 +310,26 @@ class Post {
 	 * @return SplFixedArray all Posts found
 	 * @throws PDO Exception When mySQL related errors occur
 	 */
+	public static function getAllPosts(pdo &$pdo) {
+				// create query template
+				$query = "SELECT postId, handle, contents FROM post";
+				$statement = $pdo->prepare($query);
+				$statement->execute();
+
+				// build an array of posts
+				$posts = new SplFixedArray($statement->rowCount());
+				$statement->setFetchMode(PDO::FETCH_ASSOC);
+				while(($row = $statement->fetch()) !== false) {
+						try{
+								$post = new Post($row["postId"], $row["handle"], $row["contents"]);
+								$posts[$posts->key()] = $post;
+								$posts->next();
+						} catch(exception $exception) {
+								// if the row cound not be converted, rethrow it
+								throw(new PDOException($exception->getmesage(), 0, $exception));
+						}
+				}
+				return($posts);
+	}
 
 }//end Post class
