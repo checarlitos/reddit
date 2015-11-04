@@ -96,9 +96,9 @@ class Post {
 	}
 
 	/**
-	 * mutator method for Post Handle Id
+	 * mutator method for Post Handle
 	 *
-	 * @param int $newPostHandle new value of profile id
+	 * @param int $newPostHandle new value of handle
 	 * @throws InvalidArgumentException if $newPostHandle is not an integer
 	 */
 	public function setHandle($newHandle) {
@@ -281,7 +281,7 @@ class Post {
 		}
 
 		// create query template
-		$query = "SELECT postId, handel, contents FROM post WHERE postId = :postId";
+		$query = "SELECT postId, handle, contents FROM post WHERE postId = :postId";
 		$statement = $pdo->prepare($query);
 
 		// bind the post id to the place holder in the tamplate
@@ -326,7 +326,7 @@ class Post {
 								$posts->next();
 						} catch(exception $exception) {
 								// if the row cound not be converted, rethrow it
-								throw(new PDOException($exception->getmesage(), 0, $exception));
+								throw(new PDOException($exception->getMessage(), 0, $exception));
 						}
 				}
 				return($posts);
