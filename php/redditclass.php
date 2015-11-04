@@ -191,7 +191,7 @@ class Post {
 			}
 
 			//create query template
-			$query  = "DELET FROM post WHERE postId = :postId";
+			$query  = "DELETE FROM post WHERE postId = :postId";
 			$statement  = $pdo->prepare($query);
 
 		 //blind the member variables to the place holder in the template
