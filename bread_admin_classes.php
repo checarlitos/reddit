@@ -85,24 +85,24 @@ class Administrator {
  */
 
 public function __construct($newAdminId, $newVolId, $newOrgId, $newAdminEmailId, $newAdminEmailActivation, $newAdminFirstNameId, $newAdminHashId, $newAdminLastNameId, $newAdminPhoneId, $newAdminSaltId){
-	try{
-		$this->setAdminId($newAdminId);
-		$this->setVolId($newVolId);
-	$this->SetOrgId($newOrgId);
-	$this->setAdminEmailId($newAdminEmailId);
-	$this->setAdminEmailActivation($newAdminEmailActivation);
-	$this->SetFirstNameId($newAdminFirstNameId);
-	$this->SetAdminHashId($newAdminHashId);
-	$this->SetAdminPhoneId($newAdminPhoneId);
-	$this->SetAdminSaltId($newAdminSaltId);
+	try {
+				$this->setAdminId($newAdminId);
+				$this->setVolId($newVolId);
+				$this->SetOrgId($newOrgId);
+				$this->setAdminEmailId($newAdminEmailId);
+				$this->setAdminEmailActivation($newAdminEmailActivation);
+				$this->SetFirstNameId($newAdminFirstNameId);
+				$this->SetAdminHashId($newAdminHashId);
+				$this->SetAdminPhoneId($newAdminPhoneId);
+				$this->SetAdminSaltId($newAdminSaltId);
 } catch(invalidArgumentException $invalidArgument) {
-	// rethrow the exception to the user
+		// rethrow the exception to the user
 throw(new InvalidArgumentException($invalidArgument-> getMessage(), 0, $invalidArgument));
 } catch(RangeException $range) {
-	// rethrow the exception to the user
+		// rethrow the exception to the user
 	throw(new RangeException($range->getMessage(), 0, $range));
 }catch(Exception $exception){
-	// rethrow generic exception
+		// rethrow generic exception
 	throw(new Exception($exception->getMessage(), 0, $exception));
 }
 
