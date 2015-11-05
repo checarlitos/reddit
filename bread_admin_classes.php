@@ -96,13 +96,13 @@ public function __construct($newAdminId, $newVolId, $newOrgId, $newAdminEmailId,
 				$this->SetAdminPhoneId($newAdminPhoneId);
 				$this->SetAdminSaltId($newAdminSaltId);
 } catch(invalidArgumentException $invalidArgument) {
-		// rethrow the exception to the user
+			// rethrow the exception to the user
 throw(new InvalidArgumentException($invalidArgument-> getMessage(), 0, $invalidArgument));
 } catch(RangeException $range) {
-		// rethrow the exception to the user
+			// rethrow the exception to the user
 	throw(new RangeException($range->getMessage(), 0, $range));
 }catch(Exception $exception){
-		// rethrow generic exception
+			// rethrow generic exception
 	throw(new Exception($exception->getMessage(), 0, $exception));
 }
 
