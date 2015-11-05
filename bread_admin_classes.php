@@ -21,7 +21,7 @@ class Administrator {
 
 	/**
 	 * Id for this Organization is for the organization that claims listing; this is the foreign key
-	 * @var
+	 * @var int $orgId
 	 */
 	private $orgId;
 
@@ -45,21 +45,25 @@ class Administrator {
 
 	/**
 	 * Id for the hash on The Administrator password
+	 * @var string $adminHash
 	 */
 	private $adminHash;
 
 	/**
 	 * Id for the The Administrator users Last Name
+	 * @var string $adminLastName
 	 */
 	private $adminLastName;
 
 	/**
 	 * Id for the The Administrator contact phone number
+	 * @var string $adminPhone
 	 */
 	private $adminPhone;
 
 	/**
 	 * Id for thr encrypted Administrator password salt data.
+	 * @var string $admin
 	 */
 	private $adminSalt;
 
@@ -84,23 +88,23 @@ public function __construct($newAdminId, $newVolId, $newOrgId, $newAdminEmailId,
 	try{
 		$this->setAdminId($newAdminId);
 		$this->setVolId($newVolId);
-		$this->SetOrgId($newOrgId);
-		$this->setAdminEmailId($newAdminEmailId);
-		$this->setAdminEmailActivation($newAdminEmailActivation);
-		$this->SetFirstNameId($newAdminFirstNameId);
-		$this->SetAdminHashId($newAdminHashId);
-		$this->SetAdminPhoneId($newAdminPhoneId);
-		$this->SetAdminSaltId($newAdminSaltId);
-	} catch(invalidArgumentException $invalidArgument) {
-		// rethrow the exception to the user
-		throw(new InvalidArgumentException($invalidArgument-> getMessage(), 0, $invalidArgument));
-	} catch(RangeException $range) {
-		// rethrow the exception to the user
-		throw(new RangeException($range->getMessage(), 0, $range));
-	}catch(Exception $exception){
-		// rethrow generic exception
-		throw(new Exception($exception->getMessage(), 0, $exception));
-	}
+	$this->SetOrgId($newOrgId);
+	$this->setAdminEmailId($newAdminEmailId);
+	$this->setAdminEmailActivation($newAdminEmailActivation);
+	$this->SetFirstNameId($newAdminFirstNameId);
+	$this->SetAdminHashId($newAdminHashId);
+	$this->SetAdminPhoneId($newAdminPhoneId);
+	$this->SetAdminSaltId($newAdminSaltId);
+} catch(invalidArgumentException $invalidArgument) {
+	// rethrow the exception to the user
+throw(new InvalidArgumentException($invalidArgument-> getMessage(), 0, $invalidArgument));
+} catch(RangeException $range) {
+	// rethrow the exception to the user
+	throw(new RangeException($range->getMessage(), 0, $range));
+}catch(Exception $exception){
+	// rethrow generic exception
+	throw(new Exception($exception->getMessage(), 0, $exception));
+}
 
 }
 
