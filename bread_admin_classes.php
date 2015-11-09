@@ -88,7 +88,7 @@ class Administrator {
 		try {
 			$this->setAdminId($newAdminId);
 			$this->setVolId($newVolId);
-			$this->SetOrgId($newOrgId);
+			$this->setOrgId($newOrgId);
 			$this->setAdminEmail($newAdminEmail);
 			$this->setAdminEmailActivation($newAdminEmailActivation);
 			$this->setAdminFirstName($newAdminFirstName);
@@ -115,7 +115,7 @@ class Administrator {
 	}
 
 	/**
-	 * Accessor method for the Aministrator Id
+	 * Accessor method for the Administrator Id
 	 */
 	Public function getAdminId() {
 		return ($this->adminId);
