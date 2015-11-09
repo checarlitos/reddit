@@ -29,7 +29,7 @@ class Administrator {
 	 * Id for the The Administrator Email address.
 	 * @var string $adminEmail
 	 */
-	private $adminEmailId;
+	private $adminEmail;
 
 	/**
 	 * Id for the activation of Administrators Email address.
@@ -73,12 +73,12 @@ class Administrator {
 	 * @param $newAdminId
 	 * @param $newVolId
 	 * @param $newOrgId
-	 * @param $newAdminEmailId
+	 * @param $newAdminEmail
 	 * @param $newAdminEmailActivation
-	 * @param $newAdminFirstNameId
+	 * @param $newAdminFirstName
 	 * @param $newAdminHashId
 	 * @param $newAdminLastNameId
-	 * @param $newAdminPhoneId
+	 * @param $newAdminPhone
 	 * @param $newAdminSaltId
 	 * @throws Exception
 	 *
@@ -89,11 +89,11 @@ class Administrator {
 			$this->setAdminId($newAdminId);
 			$this->setVolId($newVolId);
 			$this->SetOrgId($newOrgId);
-			$this->setAdminEmailId($newAdminEmailId);
+			$this->setAdminEmail($newAdminEmail);
 			$this->setAdminEmailActivation($newAdminEmailActivation);
-			$this->SetFirstNameId($newAdminFirstNameId);
+			$this->SetAdminFirstName($newAdminFirstName);
 			$this->SetAdminHashId($newAdminHashId);
-			$this->SetAdminPhoneId($newAdminPhoneId);
+			$this->SetAdminPhoneId($newAdminPhone);
 			$this->SetAdminSaltId($newAdminSaltId);
 
 
@@ -123,7 +123,7 @@ class Administrator {
 
 	/**Mutator for Administrator ID
 	 * @param Integer ; $newAdminId new value of Administrator Id
-	 * @throw InvalidAgrumentException if the new Administrator Id is not an Integer.
+	 * @throw InvalidArgumentException if the new Administrator Id is not an Integer.
 	 **/
 	Public function setAdminId($newAdminId) {
 		//base case
@@ -200,7 +200,7 @@ class Administrator {
 
 	/**Mutator for Organization ID
 	 * @param Integer ; $newOrgId new value of Organization Id
-	 * @throw InvalidAgrumentException if the new Organization Id is not an Integer.
+	 * @throw InvalidArgumentException if the new Organization Id is not an Integer.
 	 **/
 	Public function setOrgId($newOrgId) {
 		//base case
@@ -230,36 +230,36 @@ class Administrator {
 
 
 	/**
-	 * Accessor for Administrator Email; adminEmailId
-	 * @return string value for adminEmail Id
+	 * Accessor for Administrator Email; adminEmail
+	 * @return string value for adminEmail
 	 */
-		public function getAdminEmailId() {
-			return($this->adminEmailId);
+		public function getAdminEmail() {
+			return($this->adminEmail);
 		}
 
 	/**
-	 * Mutator method for Administrator Email; adminEmailId
+	 * Mutator method for Administrator Email; adminEmail
 	 *
-	 * @param String $adminEmailId new Administrator Email
-	 * @throw InvalidArgumentException if $newAdminEmailId is not a string
-	 * @throw rangeException if $newAdminEmailId is more than 128 characters
+	 * @param String $newAdminEmail new Administrator Email
+	 * @throw InvalidArgumentException if $newAdminEmail is not a string
+	 * @throw rangeException if $newAdminEmail is more than 128 characters
 	 */
-		public function setAdminEmailId($newAdminEmailId){
+		public function setAdminEmail($newAdminEmail){
 
-			//Verify the Email for Administrator is valid; adminEmailId
-				$newAdminEmailId = trim($newAdminEmailId);
-				$newAdminEmailId = filter_var($newAdminEmailId, FILTER_SANITIZE_EMAIL);
-				if (empty($newAdminEmailId) ===true) {
+			//Verify the Email for Administrator is valid; adminEmail
+				$newAdminEmail = trim($newAdminEmail);
+				$newAdminEmail = filter_var($newAdminEmail, FILTER_SANITIZE_EMAIL);
+				if (empty($newAdminEmail) ===true) {
 						Throw(new InvalidArgumentException ("There is no content in this email"));
 				}
 
 			//Verify that the Administrator's Email message is no more than 128 characters
-				if(strlen($newAdminEmailId) > 128){
+				if(strlen($newAdminEmail) > 128){
 					throw(new RangeException("Maximum amount of characters has been exceeded"));
 				}
 
-			//Convert and store this Administrator Email; adminEmailId
-				$this->adminEmailId = $newAdminEmailId;
+			//Convert and store this Administrator Email; adminEmail
+				$this-> adminEmail = $newAdminEmail;
 				}
 
 
@@ -306,15 +306,98 @@ class Administrator {
 	 * Accessor for Administrator First Name; adminFirstName; adminFirstName
 	 * @return string value for the Administrators First Name.
 	 */
-	public function getadminFirstName(){
+	public function getAdminFirstName(){
 		return($this->adminFirstName);
 	}
 
 	/**
 	 * Mutator for the Administrators First Name; adminFirstName
-	 * @param String $NewAdminFirstName
-	 * @throw
+	 * @param String $newAdminFirstName
+	 * @throw Invalid ArgumentException if Administrators First Name is not a string
+	 * @throw RangeException if Administrator First Name is to long.
 	 */
+	public function setAdminFirstName($newAdminFirstName) {
+		//Verify that First name is valid
+		$newAdminFirstName = trim($newAdminFirstName);
+		$newAdminFirstName = filter_var($newAdminFirstName, FILTER_SANITIZE_STRING);
+		if(empty ($newAdminFirstName) === true)  {
+			throw(new InvalidArgumentException("First Name is Empty or Insecure"));
+		}
+
+		//Verify the first name will fit in the database.
+		if(strlen($newAdminFirstName) > 32){
+			throw(new RangeException("First Name is too long"));
+		}
+
+		//Store the first name.
+		$this->adminFirstName = $newAdminFirstName;
+	}
+
+
+
+
+
+	/**hash
+	 *
+	 *
+	 *
+	 */
+
+
+
+
+
+	/**
+	 * Accessor for Administrator Last Name; adminLastName
+	 * @return string value for the Administrators Last Name.
+	 */
+	public function getAdminLastName(){
+		return($this->adminLastName);
+	}
+
+	/**
+	 * Mutator for the Administrators Last Name; adminLastName
+	 * @param String $newAdminLastName
+	 * @throw Invalid ArgumentException if Administrators Last Name is not a string
+	 * @throw RangeException if Administrator Last Name is to long.
+	 */
+	public function setAdminLastName($newAdminLastName) {
+		//Verify that Last name is valid
+		$newAdminLastName = trim($newAdminLastName);
+		$newAdminLastName = filter_var($newAdminLastName, FILTER_SANITIZE_STRING);
+		if(empty ($newAdminLastName) === true)  {
+			throw(new InvalidArgumentException("First Name is Empty or Insecure"));
+		}
+
+		//Verify the Last name will fit in the database.
+		if(strlen($newAdminLastName) > 32){
+			throw(new RangeException("Last Name is too long"));
+		}
+
+		//Store the first name.
+		$this->adminLastName = $newAdminLastName;
+	}
+
+
+
+
+	/**
+	 *Accessor for the Administrators phone number.
+	 */
+
+
+
+
+
+	/** salt
+	 *
+	 *
+	 *
+	 *
+	 */
+
+
+
 
 
 }
