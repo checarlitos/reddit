@@ -29,7 +29,7 @@ class Administrator {
 	 * Id for the The Administrator Email address.
 	 * @var string $adminEmail
 	 */
-	private $adminEmail;
+	private $adminEmailId;
 
 	/**
 	 * Id for the activation of Administrators Email address.
@@ -203,12 +203,12 @@ class Administrator {
 		//Verify the Organization Id is valid
 		$newOrgId = filter_var($newOrgId, FILTER_VALIDATE_INT);
 		if($newOrgId === false) {
-			throw(new InvalidArgumentException("This Organization IS is not a valid iteger"));
+			throw(new InvalidArgumentException("This Organization ID is not a valid Number"));
 		}
 
-		//verify the Organization ID is positive
+		//verify the Organization ID is good
 		if($newOrgId <= 0) {
-			throw (new RangeException("This Organization IDis not positive"));
+			throw (new RangeException("This Organization ID is not valid"));
 		}
 
 		//convert and store the Administrator Id
@@ -219,7 +219,7 @@ class Administrator {
 	 * Accessor for Administrator Email; adminEmailId
 	 * @return string value for adminEmail Id
 	 */
-		public function getAdminEmailId($adminEmailId) {
+		public function getAdminEmailId() {
 			return($this->adminEmailId);
 		}
 
@@ -228,11 +228,24 @@ class Administrator {
 	 *
 	 * @param String $adminEmailId new Administrator Email
 	 * @throw InvalidArgumentException if $newAdminEmailId is not a string
-	 * @throw rangeException if $newAdminEmailId is less greater than 128 characters
+	 * @throw rangeException if $newAdminEmailId is more than 128 characters
 	 */
 		public function setAdminEmailId($newAdminEmailId){
 
-			//ver
+			//verify the Email for Administrator is valid; adminEmailId
+				$newAdminEmailId = trim($newAdminEmailId);
+				$newAdminEmailId = filter_var($newAdminEmailId, FILTER_SANITIZE_EMAIL);
+				if (empty($newAdminEmailId) ===true) {
+						Throw(new InvalidArgumentException ("There is no content in this email"));
+				}
+
+			//verify that the Administrator's Email message is no more than 128 characters
+			if(strlen($newAdminEmailId) > 128){
+				throw(new RangeException("Maximum amount of characters has been exceeded"));
+			}
+
+			//convert and store this Administrator Email; adminEmailId
+			$this->adminEmail = $newAdminEmailId;
 		}
 
 }
