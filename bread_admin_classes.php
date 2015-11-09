@@ -76,10 +76,10 @@ class Administrator {
 	 * @param $newAdminEmail
 	 * @param $newAdminEmailActivation
 	 * @param $newAdminFirstName
-	 * @param $newAdminHashId
-	 * @param $newAdminLastNameId
+	 * @param $newAdminHash
+	 * @param $newAdminLastName
 	 * @param $newAdminPhone
-	 * @param $newAdminSaltId
+	 * @param $newAdminSalt
 	 * @throws Exception
 	 *
 	 */
@@ -92,9 +92,9 @@ class Administrator {
 			$this->setAdminEmail($newAdminEmail);
 			$this->setAdminEmailActivation($newAdminEmailActivation);
 			$this->SetAdminFirstName($newAdminFirstName);
-			$this->SetAdminHashId($newAdminHashId);
-			$this->SetAdminPhoneId($newAdminPhone);
-			$this->SetAdminSaltId($newAdminSaltId);
+			$this->SetAdminHash($newAdminHashId);
+			$this->SetAdminPhone($newAdminPhone);
+			$this->SetAdminSalt($newAdminSaltId);
 
 
 		} catch(invalidArgumentException $invalidArgument) {
@@ -383,7 +383,19 @@ class Administrator {
 
 	/**
 	 *Accessor for the Administrators phone number.
+	 * @return string value of Phone Number.
 	 */
+	public function getAdminPhone(){
+		return($this->adminPhone);
+	}
+
+	/**
+	 * Mutator for Administrator Phone Number
+	 *
+	 * @param string $newAdminPhone
+	 * @throw InvalidArgumentException if Administrators Phone Number is not a string
+	 */
+
 
 
 
