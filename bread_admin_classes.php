@@ -147,6 +147,10 @@ class Administrator {
 		$this->adminId = intval($newAdminId);
 	}
 
+
+
+
+
 	/**
 	 * Accessor method for the Volunteer Id
 	 * @return integer value of Volunteer Id
@@ -181,6 +185,11 @@ class Administrator {
 		$this->volId = intval($newVolId);
 	}
 
+
+
+
+
+
 	/**
 	 * accessor method for Organization ID
 	 * @return int value of Organization ID
@@ -211,9 +220,14 @@ class Administrator {
 			throw (new RangeException("This Organization ID is not valid"));
 		}
 
-		//convert and store the Administrator Id
+		//convert and store the Organization Id
 		$this->adminId = intval($newOrgId);
 	}
+
+
+
+
+
 
 	/**
 	 * Accessor for Administrator Email; adminEmailId
@@ -248,25 +262,60 @@ class Administrator {
 				$this->adminEmailId = $newAdminEmailId;
 				}
 
+
+
+
+
+
 	/**
 	 * Accessor for Administrator Email Activation; adminEmailActivation
+	 * @return string Value for Administrator Email Activation.
+	 */
+	public function getAdminEmailActivation(){
+		return($this->adminEmailActivation);
+	}
+
+	/**
+	 * Mutator for Administrator Email Activation; adminEmailActivation
 	 * @return string $newAdminEmailActivation
+	 * @throw InvalidArgumentException
 	 */
 	public function setAdminEmailActivation($newAdminEmailActivation){
 
-		//Verify Administrator Email is Valid
+		//Verify Administrator Email is Valid;adminEmailActivation
 		$newAdminEmailActivation = filter_var($newAdminEmailActivation, FILTER_SANITIZE_STRING);
 		if(strlen($newAdminEmailActivation) < 16) {
 			throw(new InvalidArgumentException("activation code is insufficient or insecure pkk"));
 		}
 
-		//Verify Administrator Email "will fit in the DATABASE" pkk
+		//Verify Administrator Email "will fit in the DATABASE" pkk;adminEmailActivation
 		if(strlen($newAdminEmailActivation) > 16) {
 			throw(new RangeException("Activation Code is too large pkk"));
 		}
 
-		//
+		//Store Activation for Administrator Email;adminEmailActivation
+		$this->adminEmailActivation = $newAdminEmailActivation;
 	}
+
+
+
+
+
+
+	/**
+	 * Accessor for Administrator First Name; adminFirstName; adminFirstName
+	 * @return string value for the Administrators First Name.
+	 */
+	public function getadminFirstName(){
+		return($this->adminFirstName);
+	}
+
+	/**
+	 * Mutator for the Administrators First Name; adminFirstName
+	 * @param String $NewAdminFirstName
+	 * @throw
+	 */
+
 
 }
 
