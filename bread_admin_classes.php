@@ -232,21 +232,41 @@ class Administrator {
 	 */
 		public function setAdminEmailId($newAdminEmailId){
 
-			//verify the Email for Administrator is valid; adminEmailId
+			//Verify the Email for Administrator is valid; adminEmailId
 				$newAdminEmailId = trim($newAdminEmailId);
 				$newAdminEmailId = filter_var($newAdminEmailId, FILTER_SANITIZE_EMAIL);
 				if (empty($newAdminEmailId) ===true) {
 						Throw(new InvalidArgumentException ("There is no content in this email"));
 				}
 
-			//verify that the Administrator's Email message is no more than 128 characters
-			if(strlen($newAdminEmailId) > 128){
-				throw(new RangeException("Maximum amount of characters has been exceeded"));
-			}
+			//Verify that the Administrator's Email message is no more than 128 characters
+				if(strlen($newAdminEmailId) > 128){
+					throw(new RangeException("Maximum amount of characters has been exceeded"));
+				}
 
-			//convert and store this Administrator Email; adminEmailId
-			$this->adminEmail = $newAdminEmailId;
+			//Convert and store this Administrator Email; adminEmailId
+				$this->adminEmailId = $newAdminEmailId;
+				}
+
+	/**
+	 * Accessor for Administrator Email Activation; adminEmailActivation
+	 * @return string $newAdminEmailActivation
+	 */
+	public function setAdminEmailActivation($newAdminEmailActivation){
+
+		//Verify Administrator Email is Valid
+		$newAdminEmailActivation = filter_var($newAdminEmailActivation, FILTER_SANITIZE_STRING);
+		if(strlen($newAdminEmailActivation) < 16) {
+			throw(new InvalidArgumentException("activation code is insufficient or insecure pkk"));
 		}
+
+		//Verify Administrator Email "will fit in the DATABASE" pkk
+		if(strlen($newAdminEmailActivation) > 16) {
+			throw(new RangeException("Activation Code is too large pkk"));
+		}
+
+		//
+	}
 
 }
 
