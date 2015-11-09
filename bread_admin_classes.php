@@ -155,7 +155,7 @@ class Administrator {
 		return ($this->volId);
 	}
 
-	/**Mutator for Vol ID
+	/**Mutator for Volunteer ID
 	 * @param Integer ; $newVolId new value of Volunteer Id
 	 * @throw InvalidArgumentException if the new Volunteer Id is not an Integer.
 	 **/
@@ -189,7 +189,7 @@ class Administrator {
 		return ($this->orgId);
 	}
 
-	/**Mutator for Organization Id ID
+	/**Mutator for Organization ID
 	 * @param Integer ; $newOrgId new value of Organization Id
 	 * @throw InvalidAgrumentException if the new Organization Id is not an Integer.
 	 **/
@@ -214,6 +214,26 @@ class Administrator {
 		//convert and store the Administrator Id
 		$this->adminId = intval($newOrgId);
 	}
+
+	/**
+	 * Accessor for Administrator Email; adminEmailId
+	 * @return string value for adminEmail Id
+	 */
+		public function getAdminEmailId($adminEmailId) {
+			return($this->adminEmailId);
+		}
+
+	/**
+	 * Mutator method for Administrator Email; adminEmailId
+	 *
+	 * @param String $adminEmailId new Administrator Email
+	 * @throw InvalidArgumentException if $newAdminEmailId is not a string
+	 * @throw rangeException if $newAdminEmailId is less greater than 128 characters
+	 */
+		public function setAdminEmailId($newAdminEmailId){
+
+			//ver
+		}
 
 }
 
