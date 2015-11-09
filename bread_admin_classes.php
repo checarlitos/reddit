@@ -91,10 +91,10 @@ class Administrator {
 			$this->SetOrgId($newOrgId);
 			$this->setAdminEmail($newAdminEmail);
 			$this->setAdminEmailActivation($newAdminEmailActivation);
-			$this->SetAdminFirstName($newAdminFirstName);
-			$this->SetAdminHash($newAdminHashId);
-			$this->SetAdminPhone($newAdminPhone);
-			$this->SetAdminSalt($newAdminSaltId);
+			$this->setAdminFirstName($newAdminFirstName);
+			$this->setAdminHash($newAdminHash);
+			$this->setAdminPhone($newAdminPhone);
+			$this->setAdminSalt($newAdminSalt);
 
 
 		} catch(invalidArgumentException $invalidArgument) {
@@ -249,7 +249,7 @@ class Administrator {
 			//Verify the Email for Administrator is valid; adminEmail
 				$newAdminEmail = trim($newAdminEmail);
 				$newAdminEmail = filter_var($newAdminEmail, FILTER_SANITIZE_EMAIL);
-				if (empty($newAdminEmail) ===true) {
+				if (empty($newAdminEmail) === true) {
 						Throw(new InvalidArgumentException ("There is no content in this email"));
 				}
 
@@ -337,12 +337,32 @@ class Administrator {
 
 
 
-	/**hash
-	 *
-	 *
-	 *
+	/**Accessor for Administrator Hash
+	 * @return string value of hash
 	 */
+	public function getAdminHash() {
+		return ($this->adminHash);
+	}
 
+	/** Mutator For Administrator Hash; adminHash
+	 * @param String $newAdminHash new Value for password
+	 * @throw InvalidArgumentException if $newAdminHash is not a string.
+	 * @throw RangeException if $newAdminHas is too long.
+	 */
+	public function setAdminHash($newAdminHash) {
+		// Verify that Hash is correct.
+		$newAdminHash = trim($newAdminHash);
+		$newAdminHash = filter_var($newAdminHash, FILTER_SANITIZE_STRING);
+		if(empty ($newAdminHash) === true) {
+					throw(new InvalidArgumentException ("Password is incorrect"));
+		}
+		//verify the hash will fit into the database.
+		if(strlen($newAdminHash) !== 128) {
+					throw(new RangeException("Password is not verified"));
+		}
+		//Store Administrator Hash
+		$this->adminHash = $newAdminHash;
+	}
 
 
 
@@ -418,14 +438,36 @@ class Administrator {
 
 
 
-	/** salt
-	 *
-	 *
-	 *
-	 *
+	/**
+	 *Accessor the Administrator Salt
+	 * @return string value for Administrator salt
 	 */
 
+	public function getAdminSalt() {
+		return($this->adminSalt);
+	}
 
+	/**
+	 * Mutator method for Administrator salt; adminSalt
+	 * @param string $newAdminSalt new value of Administrator salt.
+	 * @throw InvalidArgumentException if $newAdminSalt is not a string
+	 * @throw RangeException if $newAdminSalt us not 64 characters
+	 */
+
+	public function setAdminSalt($newAdminSalt){
+		//Verify Administrator salt is correct
+		$newAdminSalt = trim($newAdminSalt);
+		$newAdminSalt = filter_vat($newAdminSalt, FILTER_SANITIZE_STRING);
+		if(empty($newAdminSalt) === true) {
+			throw(new InvalidArgumentException("Password is incorrect"));
+		}
+		//Verify Administrator salt is correct length
+		if(strlen($newAdminSalt) !== 64) {
+			throw(new RangeException("Password is not valid"));
+		}
+		//Store the Administrator Salt content.
+		$this->adminSalt = $newAdminSalt;
+	}
 
 
 
