@@ -283,19 +283,19 @@ class Administrator {
 	public function setAdminEmailActivation($newAdminEmailActivation){
 
 		//Verify Administrator Email is Valid;adminEmailActivation
-		$newAdminEmailActivation = filter_var($newAdminEmailActivation, FILTER_SANITIZE_STRING);
-		if(strlen($newAdminEmailActivation) < 16) {
-			throw(new InvalidArgumentException("activation code is insufficient or insecure pkk"));
-		}
+			$newAdminEmailActivation = filter_var($newAdminEmailActivation, FILTER_SANITIZE_STRING);
+			if(strlen($newAdminEmailActivation) < 16) {
+				throw(new InvalidArgumentException("activation code is insufficient or insecure pkk"));
+			}
 
 		//Verify Administrator Email "will fit in the DATABASE" pkk;adminEmailActivation
-		if(strlen($newAdminEmailActivation) > 16) {
-			throw(new RangeException("Activation Code is too large pkk"));
-		}
+			if(strlen($newAdminEmailActivation) > 16) {
+				throw(new RangeException("Activation Code is too large pkk"));
+			}
 
 		//Store Activation for Administrator Email;adminEmailActivation
-		$this->adminEmailActivation = $newAdminEmailActivation;
-	}
+			$this->adminEmailActivation = $newAdminEmailActivation;
+		}
 
 
 
@@ -318,20 +318,20 @@ class Administrator {
 	 */
 	public function setAdminFirstName($newAdminFirstName) {
 		//Verify that First name is valid
-		$newAdminFirstName = trim($newAdminFirstName);
-		$newAdminFirstName = filter_var($newAdminFirstName, FILTER_SANITIZE_STRING);
-		if(empty ($newAdminFirstName) === true)  {
-			throw(new InvalidArgumentException("First Name is Empty or Insecure"));
-		}
+			$newAdminFirstName = trim($newAdminFirstName);
+			$newAdminFirstName = filter_var($newAdminFirstName, FILTER_SANITIZE_STRING);
+			if(empty ($newAdminFirstName) === true)  {
+				throw(new InvalidArgumentException("First Name is Empty or Insecure"));
+			}
 
 		//Verify the first name will fit in the database.
-		if(strlen($newAdminFirstName) > 32){
-			throw(new RangeException("First Name is too long"));
-		}
+			if(strlen($newAdminFirstName) > 32){
+				throw(new RangeException("First Name is too long"));
+			}
 
 		//Store the first name.
-		$this->adminFirstName = $newAdminFirstName;
-	}
+			$this->adminFirstName = $newAdminFirstName;
+		}
 
 
 
@@ -393,9 +393,26 @@ class Administrator {
 	 * Mutator for Administrator Phone Number
 	 *
 	 * @param string $newAdminPhone
-	 * @throw InvalidArgumentException if Administrators Phone Number is not a string
+	 * @throw InvalidArgumentException if Administrators Phone Number is not a string.
+	 * @throw RangeException if $newAdminPhone is contains more than 32 characters.
 	 */
+	public function setAdminPhone($newAdminPhone) {
+		//Verify that the Phone Number is Secure
+		$newAdminPhone = trim($newAdminPhone);
+		$newAdminPhone = filter_var($newAdminPhone, FILTER_SANITIZE_STRING);
+		if(empty ($newAdminPhone) === true) {
+			throw(new InvalidArgumentException("Please Enter Phone Number"));
+		}
 
+		//Verify the PHone Number will fit in the database
+		if(strlen($newAdminPhone) > 32) {
+			throw(new RangeException("Phone Number is to long"));
+		}
+
+		//Store Administrator Phone Number.
+		$this->adminPhone = $newAdminPhone;
+
+	}
 
 
 
