@@ -585,7 +585,7 @@ class Administrator {
 			$statement->setFetchMode(PDO::FETCH_ASSOC);
 			$row = $statement->fetch();
 			if($row !== false) {
-				$administrator = new administrator($row["adminId"], $row["ordId"], $row["adminEmail"], $row["AdminEmailActivation"], $row[""], $row["adminFirstName"], $row["adminHash"], $row["adminLastName"], $row["adminPhone"], $row["adminSalt"]);
+				$administrator = new administrator($row["adminId"], $row["volId"], $row["ordId"], $row["adminEmail"], $row["AdminEmailActivation"], $row["adminFirstName"], $row["adminHash"], $row["adminLastName"], $row["adminPhone"], $row["adminSalt"]);
 			}
 		}catch(Exception $exception){
 			//if the row could not be converted, rethrow it
@@ -604,10 +604,26 @@ class Administrator {
 	 */
 	public static function getAllAdministrators(PDO $pdo){
 		//create query template
-		$query = "SELECT adminId, volId, orgId, adminEmail, adminEmailActivation, adminFirstName, adminHash, adminLastName, adminPhone, adminPhone, adminSalt
+		$query = "SELECT adminId, volId, orgId, adminEmail, adminEmailActivation, adminFirstName, adminHash, adminLastName, adminPhone, adminPhone, adminSalt FROM administrator";
+		$statement = $pdo->prepare($query);
+		$statement->execute();
+
+		//Build an array of Administrators
+		$administrators = new SplFixedArray($statement->rowCount());
+		$statement->setFetchMode(PDO::FETCH_ASSOC);
+		while(($row = $statement->fetch()) !== false){
+			try{
+					$administrator = new administrator(($row["adminId"], $row["volId"], $row["ordId"], $row["adminEmail"], $row["AdminEmailActivation"], $row["adminFirstName"], $row["adminHash"], $row["adminLastName"], $row["adminPhone"], $row["adminSalt"]);
+					$administrators[$administrators->key() = $administrator];
+					$administrators->next();
+			} catch(Exception $exception){
+				//if the row could not be converted, rethrow it.
+				throw(new PDOException($exception->getMessage(), 0, $exception));
+			}
+		}
+
+		return($administrators);
 	}
-
-
 }
 
 
