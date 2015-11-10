@@ -469,7 +469,39 @@ class Administrator {
 		$this->adminSalt = $newAdminSalt;
 	}
 
+/**
+ * Insert Administrator into mySQL; adminId
+ *
+ * @param PDO $pdo PDO connection object
+ * @throw PDO exception when mySQL related errors occur
+ */
+	public function delete(PDO $pdo) {
+		//verify that adminId id null, and does not allow duplicate adminId
+		if($this->adminId !== null){
+			throw (new PDOException("This Administrator already exists"));
+		}
 
+		//Create Query Template.
+		$query = "INSERT INTO administrator(volId, orgId, adminEmail, adminEmailActivation, adminFirstName, adminHash, adminLastName, adminPhone, adminPhone, adminSalt) VALUES(:volId, :orgId, :adminEmail, :adminEmailActivation, :adminFirstName, :adminHash, :adminLastName, :adminPhone, :adminPhone, :adminSalt)";
+		$statement = $pdo->prepare($query);
+
+		//Blind the member variables to the place holder in the template.
+		$parameters = array("volId" => $this->volId, "orgId" => $this->orgId, "adminEmail" => $this->adminEmail, "adminEmailActivation" => $this->adminEmailActivation, "adminFirstName" => $this->adminFirstName, "adminHash" => $this->adminHash, "adminLastName" => $this->adminLastName, "adminPhone" => $this->adminPhone, "adminPhone" => $this->adminPhone, "adminSalt" => $this->adminSalt);
+		$statement->execute($parameters);
+
+		//Update the null adminId whith what mySQl just gave us.
+		$this->admin = intval($pdo->lastInsertId() );
+	}
+
+	/**
+	 * delete this adminstrator from mySQL
+	 *
+	 * @param PDO $pdo PDO Connection object.
+	 * @throws PDO exception when mySQL related errors occur
+	 */
+	public function delete(PDO $pdo) {
+		//
+	}
 
 }
 
