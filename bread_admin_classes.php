@@ -572,7 +572,7 @@ class Administrator {
 				throw(new PDOException("Administrator ID is not Positive"));
 		}
 		//create query template
-		$query = "SELECT adminID, volId, orgId, adminEmail, adminEmailActivation, adminFirstName, adminHash, adminLastName, adminPhone, adminPhone, adminSalt FROM administrator WHERE adminId = :adminId";
+		$query = "SELECT adminId, volId, orgId, adminEmail, adminEmailActivation, adminFirstName, adminHash, adminLastName, adminPhone, adminPhone, adminSalt FROM administrator WHERE adminId = :adminId";
 		$statement = $pdo->prepare($query);
 
 		//Bind the administraotr id to the place holder in the template
@@ -604,7 +604,7 @@ class Administrator {
 	 */
 	public static function getAllAdministrators(PDO $pdo){
 		//create query template
-		$query = "SELECT"
+		$query = "SELECT adminId, volId, orgId, adminEmail, adminEmailActivation, adminFirstName, adminHash, adminLastName, adminPhone, adminPhone, adminSalt
 	}
 
 
