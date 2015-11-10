@@ -526,6 +526,10 @@ class Administrator {
 		}
 
 
+
+
+
+
 	/**
 	 * Update this Administrator in mySQL
 	 *
@@ -540,12 +544,16 @@ class Administrator {
 
 		//Create Query Template
 		$query ="UPDATE administrator SET volId = :volId, orgId = :ordId, adminEmail = :adminEmail,  adminEmailActivation= :adminEmailActivation, adminFirstName  = :adminFirstName,  adminHash= :adminHash, adminLastName = :adminLastName,  adminPhone= :adminPhone,  adminPhone= :adminPhone,  adminSalt= :adminSalt";
-		Statement = $pdo->prepare($query);
+		$statement = $pdo->prepare($query);
 
 		//Bind the Variables tot he place holder in the template.
 		$parameters = array("volId"=> $this->volId, "orgId"=> $this->orgId, "adminEmail"=> $this->adminEmail, "adminEmailActivation"=> $this->adminEmailActivation, "adminFirstName"=> $this->adminFirstName, "adminHash"=> $this->adminHash, "dminLastName"=> $this->adminLastName, "adminPhone"=> $this->adminPhone, "adminPhone"=> $this->adminPhone, "adminSalt"=> $this->adminSalt);
-		$state
-	}
+		$statement->execute($parameters);
+		}
+
+
+
+	/**
 
 
 
