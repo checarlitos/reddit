@@ -469,13 +469,19 @@ class Administrator {
 		$this->adminSalt = $newAdminSalt;
 	}
 
+
+
+
+
+
+
 /**
  * Insert Administrator into mySQL; adminId
  *
  * @param PDO $pdo PDO connection object
  * @throw PDO exception when mySQL related errors occur
  */
-	public function delete(PDO $pdo) {
+	public function insert(PDO $pdo) {
 		//verify that adminId id null, and does not allow duplicate adminId
 		if($this->adminId !== null){
 			throw (new PDOException("This Administrator already exists"));
@@ -493,15 +499,55 @@ class Administrator {
 		$this->admin = intval($pdo->lastInsertId() );
 	}
 
+
+
+
+
+
 	/**
-	 * delete this adminstrator from mySQL
+	 * Delete this Administrator from mySQL
 	 *
 	 * @param PDO $pdo PDO Connection object.
 	 * @throws PDO exception when mySQL related errors occur
 	 */
 	public function delete(PDO $pdo) {
-		//
+		//enforce that the adminId is not null
+		if($this->adminId === null) {
+			throw(new PDOException("Unable to delete a Administrator that does not exist"));
+		}
+
+		//create query template
+		$query = "DELETE FROM administrator WHERE adminID =:adminID";
+		$statement = $pdo->prepare($query);
+
+		//Bind the variables to the place holder in the template
+		$parameters = array("adminId" => $this->adminId);
+		$statement ->execute($parameters);
+		}
+
+
+	/**
+	 * Update this Administrator in mySQL
+	 *
+	 * @param PDO $pdo PDO connection object
+	 * @throw PDOException when mySQL related errors occur
+	 */
+	Public function update(PDO $pdo){
+		//Enforce the Administrator is null(i.e, do not update a administrator that hasn't been inserted)
+		if($this->adminId === null) {
+				throw(new PDOException("Unable to update Administrator that does not exist"));
+		}
+
+		//Create Query Template
+		$query ="UPDATE administrator SET volId = :volId, orgId = :ordId, adminEmail = :adminEmail,  adminEmailActivation= :adminEmailActivation, adminFirstName  = :adminFirstName,  adminHash= :adminHash, adminLastName = :adminLastName,  adminPhone= :adminPhone,  adminPhone= :adminPhone,  adminSalt= :adminSalt";
+		Statement = $pdo->prepare($query);
+
+		//Bind the Variables tot he place holder in the template.
+		$parameters = array("volId"=> $this->volId, "orgId"=> $this->orgId, "adminEmail"=> $this->adminEmail, "adminEmailActivation"=> $this->adminEmailActivation, "adminFirstName"=> $this->adminFirstName, "adminHash"=> $this->adminHash, "dminLastName"=> $this->adminLastName, "adminPhone"=> $this->adminPhone, "adminPhone"=> $this->adminPhone, "adminSalt"=> $this->adminSalt);
+		$state
 	}
+
+
 
 }
 
