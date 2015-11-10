@@ -554,7 +554,58 @@ class Administrator {
 
 
 	/**
+	 * Get Administrator by adminId
+	 *
+	 * @param PDO $pdo PDO connection object
+	 * @param int $adminId Administrator Id to search for
+	 * @return mixed Administrator found or null if not found
+	 * @throw PDOException when mySQL related errors occur
+	 */
 
+	public static function getAdministratorByAdminId(PDO $pdo, $adminId) {
+		//sanitize the adminId before searching
+		$adminId = Filter_var($adminId, FILTER_VALIDATE_INT);
+		if($adminId === false) {
+				throw(new PDOException("Administrator ID is not a integer"));
+		}
+		if($adminId <= 0) {
+				throw(new PDOException("Administrator ID is not Positive"));
+		}
+		//create query template
+		$query = "SELECT adminID, volId, orgId, adminEmail, adminEmailActivation, adminFirstName, adminHash, adminLastName, adminPhone, adminPhone, adminSalt FROM administrator WHERE adminId = :adminId";
+		$statement = $pdo->prepare($query);
+
+		//Bind the administraotr id to the place holder in the template
+		$parameters = array("adminId" => $adminId);
+		$statement->execute($parameters);
+
+		//grab the administrator from mySQL
+		try {
+			$administrator = null;
+			$statement->setFetchMode(PDO::FETCH_ASSOC);
+			$row = $statement->fetch();
+			if($row !== false) {
+				$administrator = new administrator($row["adminId"], $row["ordId"], $row["adminEmail"], $row["AdminEmailActivation"], $row[""], $row["adminFirstName"], $row["adminHash"], $row["adminLastName"], $row["adminPhone"], $row["adminSalt"]);
+			}
+		}catch(Exception $exception){
+			//if the row could not be converted, rethrow it
+			throw(new PDOException($exception->getmessage(),0, $exception));
+		}
+		return($administrator);
+
+	}
+
+	/**
+	 * Get all Administrators
+	 *
+	 * @param PDO $pdo connection object
+	 * @return SplFixedArray all Administrators found
+	 * @throws PDOException when mySQL reaalted errors occur
+	 */
+	public static function getAllAdministrators(PDO $pdo){
+		//create query template
+		$query = "SELECT"
+	}
 
 
 }
