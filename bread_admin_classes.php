@@ -91,7 +91,7 @@ class Administrator {
 			$this->setOrgId($newOrgId);
 			$this->setAdminEmail($newAdminEmail);
 			$this->setAdminEmailActivation($newAdminEmailActivation);
-			$this->setAdminFirstName($newAdminFirstName);
+			$this->setAdminFirstName($newAdminFirstNAme);
 			$this->setAdminHash($newAdminHash);
 			$this->setAdminPhone($newAdminPhone);
 			$this->setAdminSalt($newAdminSalt);
@@ -457,7 +457,7 @@ class Administrator {
 	public function setAdminSalt($newAdminSalt){
 		//Verify Administrator salt is correct
 		$newAdminSalt = trim($newAdminSalt);
-		$newAdminSalt = filter_vat($newAdminSalt, FILTER_SANITIZE_STRING);
+		$newAdminSalt = filter_var($newAdminSalt, FILTER_SANITIZE_STRING);
 		if(empty($newAdminSalt) === true) {
 			throw(new InvalidArgumentException("Password is incorrect"));
 		}
