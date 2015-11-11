@@ -372,7 +372,7 @@ class AdministratorTest extends BreadBasketTest {
 	/**
 	 * test grabbing a administrator by phone number
 	 */
-	public function testGetAministratorByAdminPhone(){
+	public function testGetAdministratorByAdminPhone(){
 		//count the number of rows and save it for later
 		$numRows = $this->getConnection()->getRowCount("administrator");
 
